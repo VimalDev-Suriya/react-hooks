@@ -5,8 +5,6 @@
 const UserForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    console.log(state);
   };
 
   return (

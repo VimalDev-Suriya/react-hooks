@@ -1,3 +1,10 @@
+// Note - forwardRef, useImperativeHandle
+/*
+1. What
+2. When
+3. Caveats
+*/
+
 const TodoItem = (props) => {
   const { title, completed } = props ?? {};
 

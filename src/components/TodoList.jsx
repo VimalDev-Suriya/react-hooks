@@ -1,12 +1,19 @@
-import TodoItem from "./TodoItem";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import TodoItem from "./TodoItem";
 import UserSelect from "./UserSelect";
 
 // Note - useEffect, useRef
 /*
-
+1. What
+2. When
+3. Caveats
 */
 const TodoList = () => {
+  const [todos, setTodos] = useState([]);
+  const [error, setError] = useState();
+  const [loading, setLoading] = useState(null);
+
   if (error) {
     return <div>Error occured</div>;
   }

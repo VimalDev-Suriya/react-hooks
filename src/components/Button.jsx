@@ -1,6 +1,8 @@
 // Note - useRef
 /*
-
+1. What
+2. When
+3. Caveats
 */
 const Button = () => {
   const handleClickedTimes = () => {};

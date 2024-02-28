@@ -2,11 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+`npx create-react-app <app-name>`
+
 ## Local Setup
 
 This app demands below versions:
 
-node >= 18
+node >= 18 <br>
 npm >= 9
 
 ## NPM Packages installed additionally
@@ -33,14 +35,14 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ## Different types of Hooks:
 
-1. useState - Creates the state variables
-2. useEffect - perform the effects
-3. useRef
-4. useReducer
-5. useCallbacks
+1. useState
+2. useReducer
+3. useEffect
+4. useRef
+5. useContext
 6. useMemo
-7. useContext
+7. useCallbacks
 
 ## Point to be noted
 
-Always call the Hooks at the top level
+`Always call the Hooks at the top level`
