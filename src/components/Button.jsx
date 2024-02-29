@@ -1,15 +1,32 @@
-// Note - useRef
-/*
-1. What
-2. When
-3. Caveats
-*/
+import { useRef } from "react";
+
+// Note: (useRef)
+// 1. This will not trigger re-render
+// 2. Dont use ref to display the value in the render
+// 3. Dont read or write the values at render phase.
+
 const Button = () => {
-  const handleClickedTimes = () => {};
+  // useRef is used to refer the value that is not rendered or ref the real DOM element
+  const buttonRef = useRef(0);
+
+  //  Use ref will not re-render
+  console.log("%c Outside", "color:red");
+
+  // useEfect(() => {
+  //   buttonRef.current.focus();
+  // }, []);
+
+  const handleClickedTimes = () => {
+    // Mutatting the value is possible in ref
+    buttonRef.current = buttonRef.current + 1;
+
+    console.log("Clicked times", buttonRef.current);
+  };
 
   return (
     <>
-      <button onClick={handleClickedTimes}>Clicked</button>
+      <button onClick={handleClickedTimes}>Clicked {buttonRef.current}</button>
+      {/* <button ref={buttonRef}>Clicked</button> */}
     </>
   );
 };

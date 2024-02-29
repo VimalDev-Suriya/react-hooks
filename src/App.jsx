@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import UserForm from "./components/UserForm";
 import Button from "./components/Button";
 
+// Capitalize the comp name
 function App() {
   return (
     <div className="app">
@@ -21,4 +22,5 @@ function App() {
   );
 }
 
+// export as default always (treeshaking)
 export default App;
